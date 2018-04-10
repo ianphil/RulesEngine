@@ -13,7 +13,7 @@ namespace RuleEngine
         public DateTime Created { get; set; }
         public static IEvent GenerateWorkorder(Telemetry telemetry, Severity? severity)
         {
-            return new ContosoWorkorder { Name = "CokeFridgeWorkorder", SeverityLevel = severity, Telemetry = telemetry, Created = DateTime.UtcNow };
+            return new ContosoWorkorder { Name = "RuleWorkorder", SeverityLevel = severity, Telemetry = telemetry, Created = DateTime.UtcNow };
         }
     }
 }

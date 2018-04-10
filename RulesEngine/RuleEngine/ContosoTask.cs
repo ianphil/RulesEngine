@@ -14,7 +14,7 @@ namespace RuleEngine
 
         public static IEvent GenerateTask(Telemetry telemetry, Severity? severity)
         {
-            return new ContosoTask { Name = "CokeFridgeTask", SeverityLevel = severity, Telemetry = telemetry, Created = DateTime.UtcNow };
+            return new ContosoTask { Name = "RuleTask", SeverityLevel = severity, Telemetry = telemetry, Created = DateTime.UtcNow };
         }
     }
 }

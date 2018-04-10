@@ -10,10 +10,10 @@ namespace RuleEngine
 
         public Engine()
         {
-            _rulesList.Add(new CokeFridge(36, Severity.Minor, ContosoTask.GenerateTask));
-            _rulesList.Add(new CokeFridge(38, Severity.Major, ContosoTask.GenerateTask));
-            _rulesList.Add(new CokeFridge(40, Severity.Critical, ContosoWorkorder.GenerateWorkorder));
-            _rulesList.Add(new CokeFridge(42, Severity.Terminal, ContosoWorkorder.GenerateWorkorder));
+            _rulesList.Add(new Rule("StandAlone", 36, Severity.Minor, ContosoTask.GenerateTask));
+            _rulesList.Add(new Rule("StandAlone", 38, Severity.Major, ContosoTask.GenerateTask));
+            _rulesList.Add(new Rule("StandAlone", 40, Severity.Critical, ContosoWorkorder.GenerateWorkorder));
+            _rulesList.Add(new Rule("StandAlone", 42, Severity.Terminal, ContosoWorkorder.GenerateWorkorder));
         }
 
         public IEvent ProcessRules(Telemetry telemetry)

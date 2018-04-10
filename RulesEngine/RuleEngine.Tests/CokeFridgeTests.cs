@@ -4,13 +4,13 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace RuleEngine.Tests
 {
     [TestClass]
-    public class CokeFridgeTests
+    public class StandAloneTests
     {
         [TestMethod]
-        public void Unit_CokeFridge_Minor()
+        public void Unit_StandAlone_Minor()
         {
             var _ruleEngine = new Engine();
-            var telemetry = new Telemetry { FridgeType = "CokeFridge", value = 36 };
+            var telemetry = new Telemetry { FridgeType = "StandAlone", value = 36 };
 
             var result = _ruleEngine.ProcessRules(telemetry);
 
@@ -19,10 +19,10 @@ namespace RuleEngine.Tests
         }
 
         [TestMethod]
-        public void Unit_CokeFridge_Major()
+        public void Unit_StandAlone_Major()
         {
             var _ruleEngine = new Engine();
-            var telemetry = new Telemetry { FridgeType = "CokeFridge", value = 38 };
+            var telemetry = new Telemetry { FridgeType = "StandAlone", value = 38 };
 
             var result = _ruleEngine.ProcessRules(telemetry);
 
@@ -31,10 +31,10 @@ namespace RuleEngine.Tests
         }
 
         [TestMethod]
-        public void Unit_CokeFridge_Critical()
+        public void Unit_StandAlone_Critical()
         {
             var _ruleEngine = new Engine();
-            var telemetry = new Telemetry { FridgeType = "CokeFridge", value = 40 };
+            var telemetry = new Telemetry { FridgeType = "StandAlone", value = 40 };
 
             var result = _ruleEngine.ProcessRules(telemetry);
 
@@ -43,10 +43,10 @@ namespace RuleEngine.Tests
         }
 
         [TestMethod]
-        public void Unit_CokeFridge_Terminal()
+        public void Unit_StandAlone_Terminal()
         {
             var _ruleEngine = new Engine();
-            var telemetry = new Telemetry { FridgeType = "CokeFridge", value = 42 };
+            var telemetry = new Telemetry { FridgeType = "StandAlone", value = 42 };
 
             var result = _ruleEngine.ProcessRules(telemetry);
 
@@ -55,10 +55,10 @@ namespace RuleEngine.Tests
         }
 
         [TestMethod]
-        public void Unit_CokeFridge_No_Event()
+        public void Unit_StandAlone_No_Event()
         {
             var _ruleEngine = new Engine();
-            var telemetry = new Telemetry { FridgeType = "CokeFridge", value = 30 };
+            var telemetry = new Telemetry { FridgeType = "StandAlone", value = 30 };
 
             var result = _ruleEngine.ProcessRules(telemetry);
 

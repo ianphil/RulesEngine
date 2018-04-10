@@ -4,13 +4,13 @@ using System.Text;
 
 namespace RuleEngine
 {
-    public class CokeFridge : IRule
+    public class Rule : IRule
     {
         private readonly Func<Telemetry, Severity?, IEvent> _eventGenerator;
 
-        public CokeFridge(int threshold, Severity severityLevel, Func<Telemetry, Severity?, IEvent> eventGenerator)
+        public Rule(string name, int threshold, Severity severityLevel, Func<Telemetry, Severity?, IEvent> eventGenerator)
         {
-            Name = "CokeFridge";
+            Name = name;
             Threshold = threshold;
             SeverityLevel = severityLevel;
             _eventGenerator = eventGenerator;
