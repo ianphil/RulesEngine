@@ -14,6 +14,6 @@ The goal is to seperate the rules from the logic. We create a collection of rule
 
 In this example we have are collecting refrederator telementry. We create multiple temperature based rules. Using these rules we will either generate a task or a workorder depending on the threshold and violation severity.
 
-![Image of Yaktocat](img/codemap.png)
+![Image of CodeMap](https://github.com/tripdubroot/RulesEngine/blob/master/img/codemap.PNG)
 
 Created using [The Rules Design Pattern](http://www.michael-whelan.net/rules-design-pattern/) by Michael Whelan
